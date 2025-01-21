@@ -9,3 +9,6 @@ class BlogListView(ListView):
     # Encountered heavy error due to type
     # templete = 'home.html'
     template_name = 'home.html'
+
+def ghar(request):
+    return render(request,'index.html')
