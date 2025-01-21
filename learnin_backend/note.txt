@@ -1,0 +1,5 @@
+In Memory
+--> Data stored in RAM/volatile memory
+
+python -m django startproject meme
+python -m django startapp coin
