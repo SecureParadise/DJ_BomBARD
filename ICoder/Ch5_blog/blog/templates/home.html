@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+
+<head>
+    <title>Django blog</title>
+</head>
+<link rel="stylesheet" href="{% static 'base.css' %}">
+
+<body>
+    <header>
+        <h1> <a href="{% url 'home' %}"> Django blog </a></h1>
+        <!-- <h1>  Django blog </h1> -->
+    </header>
+    <div>
+        {% block content %}
+        {% for post in object_list %}
+        <div class="post-entry">
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.body }}</p>
+        </div>
+        {% endfor %}
+        {% endblock content %}
+    </div>
+</body>
+
+</html>
